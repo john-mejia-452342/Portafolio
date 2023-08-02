@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="barra">
+            <div class="contenidobarra"></div>
+        </div>
+        <div class="containerprin">
+            <div class="container2">
+                <div class="containerlogo">
+                    <div class="logo">
+                        <img class="logoimg" src="img/icono.png" alt="">
+                        <h3 class="logotx1">ESTUDIOS</h3>
+                        <h3 class="logotx2">CREATIVOS</h3>
+                    </div>
+                </div>
+                <div class="facturacon">
+                    <h1 class="factura">FACTURA</h1>
+                    <div class="fechass">
+                        <H4 class="fecha">FECHA:</H4>
+                        <H4 class="contfecha">12/ENERO/2021</H4>
+                    </div>
+                    <div class="nfa">
+                        <h4 class="nfactura">FACTURA:</h4>
+                        <h4 class="nfac">003</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="containerpurn">
+                <div class="container3">
+                    <div class="nombre">
+                        <div class="nombreper">Emilia Torres</div>
+                        <div class="contenombre">
+                            <p>Ropa Moderna Urbana</p>
+                            <p>(55) 1234-4567</p>
+                            <p>Calle Flora 123. Ciudad de México</p>
+                        </div>
+                    </div>
+                    <div class="metodo">
+                        <div class="metodog">MÉTODO DE PAGO</div>
+                        <div class="cuenta">
+                            <H4 class="cuentas">CUENTA:</H4>
+                            <H4 class="contcuen">4916 8418 9082 4339</H4>
+                        </div>
+                        <div class="correo">
+                            <h4 class="correos">CORREO:</h4>
+                            <h4 class="contcorr">003</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="containertabla">
+                <div class="container4">
+                    <div class="tabla">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="primer">ARTÍCULO</th>
+                                    <th>CANT.</th>
+                                    <th>PRECIO</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td class="primer">Diseño de volantes</td>
+                                <td>02</td>
+                                <td>$570</td>
+                                <td>$5.700</td>
+                            </tr>
+                            <tr>
+                                <td class="primer">Diseño de tarjetas</td>
+                                <td>02</td>
+                                <td>$380</td>
+                                <td>$9.500</td>
+                            </tr>
+                            <tr>
+                                <td class="primer">Diseño de facturas</td>
+                                <td>02</td>
+                                <td>$475</td>
+                                <td>$14.250</td>
+                            </tr>
+                            <tr>
+                                <td class="primer">Diseño de logotipo</td>
+                                <td>01</td>
+                                <td>$950</td>
+                                <td>$23.750</td>
+                            </tr>
+                            <tr class="ultimo">
+                                <td class="primer">Diseño web</td>
+                                <td>01</td>
+                                <td>$950</td>
+                                <td>$33.250</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="containertotal">
+                <div class="subtotal">
+                    <p class="subtotalp">Subtotal</p>
+                    <p class="totalsub">$33.250</p>
+                </div>
+                <div class="iva">
+                    <p class="ivaimp">Imp. (16%)</p>
+                    <p class="totiva">$4.978</p>
+                </div>
+                <div class="total">
+                    <p class="totalp">TOTAL</p>
+                    <p class="totalsum">$38.228</p>
+                </div>
+            </div>
+            <div class="containerpre">
+                <div class="pregunta">
+                    <p>¿Alguna pregunta?</p>
+                    <p>Envíanos un correo a hola@sitioincreible.mx</p>
+                    <p>o llámanos al (55) 1234-5678</p>
+                </div>
+                <div class="gracias">
+                    <h1 class="graciascont"> ¡GRACIAS!</h1>
+                </div>
+            </div>
+            <div class="division">
+                <div class="horizontal">
+                    <div class="contenidohor"></div>
+                </div>
+                <div class="piedepagina">
+                    <p>Av. Libertadores 123 Tehuacán. Puebla · sitioincreible.mx</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="regresar">
+        <button onclick="window.location.href = '../index.html';" class="boton">Regresar</button>
+    </div>
+
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;900&display=swap');
+
+    /* font-family: 'Roboto Mono', monospace; */
+    /* font-family: 'Bebas Neue', sans-serif; */
+    /* font-family: 'Antonio', sans-serif; */
+    /* font-family: 'Inter', sans-serif; */
+
+    body {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 5px;
+        padding: 0;
+    }
+
+    .container {
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 10% 90%;
+        height: 1300PX;
+    }
+
+    .barra {
+        /* background: -webkit-linear-gradient(70deg, rgba(1, 184, 168, 255), rgba(81, 205, 185, 255), rgba(93, 207, 175, 255)); */
+        background-image: url(img/RAYA.jfif);
+        height: 1300PX;
+        width: 70%;
+    }
+
+    .containerbarra {
+        height: 100%;
+    }
+
+    .container2 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .contenedor {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo {
+        background-color: rgba(1, 184, 168, 255);
+        position: relative;
+        text-align: center;
+        left: 10%;
+        height: 100%;
+        width: 200px;
+        border-left: 10px solid rgba(1, 184, 168, 255);
+        border-right: 10px solid rgba(1, 184, 168, 255);
+    }
+
+    .logoimg {
+        position: relative;
+        height: 230px;
+        width: 190px;
+        top: 5%;
+    }
+
+    .logotx1 {
+        position: relative;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 20px;
+        color: white;
+        letter-spacing: 5px;
+    }
+
+    .logotx2 {
+        position: relative;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 20px;
+        color: white;
+        top: -10px;
+        letter-spacing: 5px;
+
+    }
+
+    .facturacon {
+        position: relative;
+        left: 15%;
+        top: 15%;
+    }
+
+    .fechass h4 {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .nfa h4 {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .fechass {
+        position: relative;
+        left: 20%;
+        top: -5%;
+    }
+
+    .nfa {
+        position: relative;
+        left: 14%;
+        top: -15%;
+    }
+
+    .factura {
+        position: relative;
+        font-size: 90px;
+        color: rgba(1, 184, 168, 255);
+        top: 20%;
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: 15px;
+    }
+
+    .fecha {
+        position: relative;
+        color: rgba(1, 184, 168, 255);
+    }
+
+    .nfactura {
+        position: relative;
+        color: rgba(1, 184, 168, 255);
+    }
+
+
+
+    .container3 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .nombre {
+        position: relative;
+        top: 20px;
+        left: 12%;
+    }
+
+    .nombreper {
+        font-family: 'Antonio', sans-serif;
+        color: rgba(1, 184, 168, 255);
+        font-size: 30px;
+    }
+
+    .contenombre {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .metodo {
+        position: relative;
+        top: 55%;
+        left: 25%;
+    }
+
+    .metodog {
+        position: absolute;
+        color: rgba(1, 184, 168, 255);
+        font-weight: 900;
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+
+    .cuenta {
+        position: absolute;
+        top: 20%;
+    }
+
+    .correo {
+        position: absolute;
+        top: 5%;
+    }
+
+    .cuentas,
+    .correos {
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+    }
+
+    .contcuen,
+    .contcorr {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+    }
+
+    .cuenta h4 {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .correo h4 {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .tabla {
+        width: 95%;
+        margin: 150px auto;
+    }
+
+    .primer {
+        width: 60%;
+    }
+
+    .container4 {
+        position: relative;
+        top: -100px;
+    }
+
+    table {
+        background-color: white;
+        text-align: left;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 0;
+        padding: 15px;
+    }
+
+    td {
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+    }
+
+    thead {
+        background-color: rgba(1, 184, 168, 255);
+        color: white;
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .ultimo {
+        border-bottom: 5px solid #ddd;
+    }
+
+    tr:nth-child(even) {
+        background-color: #ddd;
+    }
+
+    tr:hover td {
+        background-color: #369681;
+        color: white;
+    }
+
+    .containertotal {
+        position: relative;
+        text-align: right;
+        width: 100%;
+        top: -19%;
+        right: 7%;
+    }
+
+    .subtotal p {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .iva p {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .total p {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .subtotal {
+        position: relative;
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        top: 25px;
+    }
+
+    .iva {
+        position: relative;
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        top: 0px;
+        right: 1.5%;
+    }
+
+    .total {
+        position: relative;
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        top: -20px;
+    }
+
+    .totalp {
+        font-weight: 500;
+    }
+
+    .containerpre {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        top: -15%;
+    }
+
+    .pregunta {
+        position: relative;
+        left: 5%;
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+    }
+
+    .gracias {
+        position: relative;
+        font-size: 35px;
+        color: rgba(1, 184, 168, 255);
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: 10px;
+        top: -60px;
+        right: 5%;
+    }
+
+    .division {
+        position: relative;
+        text-align: center;
+        top: -18%;
+    }
+
+    .horizontal {
+        position: relative;
+        background: -webkit-linear-gradient(70deg, rgba(1, 184, 168, 255), rgba(81, 205, 185, 255), rgba(93, 207, 175, 255));
+        height: 10px;
+        width: 90%;
+        left: 3%;
+    }
+
+    .piedepagina {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+    }
+
+    .regresar {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .boton {
+        background-color: white;
+        border: none;
+        color: black;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    .boton:hover {
+        background-color: red;
+        color: white;
+    }
+
+    @media only screen and (max-width: 1500px) {
+        body {
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: 5px;
+            padding: 0;
+        }
+
+        .factura {
+            /* font-size: 70px; */
+            left: 0%;
+        }
+
+        .gracias {
+            /* font-size: 30px; */
+            letter-spacing: 5px;
+        }
+    }
+
+    @media only screen and (max-width: 1375px) {
+        body {
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 5px;
+            padding: 0;
+        }
+
+        .factura {
+            left: 0%;
+        }
+
+        .facturacon {
+            left: 5%;
+        }
+
+        .metodo {
+            left: 10%;
+        }
+
+    }
+
+    @media only screen and (max-width: 1140px) {
+        body {
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 5px;
+            padding: 0;
+        }
+
+        .container {
+            height: 1270px;
+        }
+
+        .barra {
+            height: 1270px;
+        }
+    }
+
+    @media only screen and (max-width: 1500px) {
+        .factura {
+            font-size: 70px;
+            letter-spacing: 10px;
+            left: 5%;
+        }
+
+        .gracias {
+            font-size: 30px;
+        }
+    }
+
+
+    @media only screen and (max-width: 725px) {
+
+        .container {
+            height: 1700px;
+        }
+
+        .barra {
+            height: 1700px;
+        }
+
+        .container2 {
+            grid-template-columns: repeat(1, 90%);
+            justify-content: center;
+        }
+
+        .logo {
+            left: 15%;
+        }
+
+        .facturacon {
+            top: -30%;
+        }
+
+        .container3 {
+            grid-template-columns: repeat(1, 90%);
+            justify-content: center;
+        }
+
+        .nombre {
+            top: -70%;
+        }
+
+        .metodo {
+            top: -100px;
+        }
+
+        .cuenta {
+            top: 10px;
+        }
+
+        .correo {
+            top: 30px;
+        }
+
+        .containertabla {
+            position: relative;
+            top: -3%;
+            font-size: 10px;
+        }
+
+        .containertotal {
+            top: -330px;
+        }
+
+        .containerpre {
+            top: -18%;
+            flex-direction: column;
+        }
+
+        .pregunta {
+            font-size: 15px;
+        }
+
+        .gracias {
+            left: 20%;
+            top: 20%;
+        }
+    }
+
+    @media only screen and (max-width: 440px) {
+        .container {
+            height: 1600px;
+        }
+
+        .barra {
+            height: 1600px;
+        }
+
+        .container2 {
+            grid-template-columns: repeat(1, 90%);
+            justify-content: center;
+        }
+
+        .logo {
+            left: 5%;
+        }
+
+        .facturacon {
+            top: -30%;
+            left: 2%;
+        }
+
+        .factura {
+            font-size: 60px;
+        }
+
+        .fechass,
+        .nfa {
+            font-size: 13px;
+        }
+
+        .container3 {
+            grid-template-columns: repeat(1, 90%);
+            justify-content: center;
+        }
+
+        .nombre {
+            top: -70%;
+        }
+
+        .contenombre {
+            font-size: 13px;
+        }
+
+        .metodo {
+            top: -100px;
+        }
+
+        .metodog {
+            letter-spacing: 2px;
+        }
+
+        .cuenta {
+            top: 10px;
+        }
+
+        .correo {
+            top: 30px;
+        }
+
+        .cuenta,
+        .correo h4 {
+            font-size: 13px;
+        }
+
+        .containertabla {
+            position: relative;
+            top: -3%;
+            font-size: 8px;
+        }
+
+        .containertotal {
+            top: -330px;
+        }
+
+        .containerpre {
+            top: -18%;
+            flex-direction: column;
+        }
+
+        .pregunta {
+            font-size: 12px;
+        }
+
+        .gracias {
+            left: 15%;
+            top: 20%;
+        }
+    }
+</style>
+
+</html>

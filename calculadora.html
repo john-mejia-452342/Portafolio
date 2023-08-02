@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <form name="calculadora" id="calculadora">
+    </form>
+    <div class="regresar">
+        <button onclick="window.location.href = 'index.html'" class="boton">Regresar</button>
+    </div>
+
+</body>
+<script>
+    window.onload = function recorrer() {
+        let contenedor = document.getElementById("calculadora");
+        document.getElementById("calculadora").innerHTML += `<table border="3" id="tabla"></table>`
+        document.getElementById("tabla").innerHTML += `<tr>
+                <td colspan="5"><input type="text" name="txtboxnros" id="txtboxnros" value="0" disabled></td></tr>`
+        document.getElementById("tabla").innerHTML +=
+            `<tr id="one"></tr> <tr id="two"></tr> <tr id="three"></tr> <tr id="four"></tr>`
+        let operadores = [
+            "1",
+            "2",
+            "3",
+            "+",
+            "-",
+            "4",
+            "5",
+            "6",
+            "*",
+            "/",
+            "7",
+            "8",
+            "9",
+            "^",
+            "√",
+            "0",
+            ".",
+            "C",
+            "=",
+        ];
+
+        for (let i = 0; i < operadores.length; i++) {
+            let operador = operadores[i];
+            if (operador == "1" || operador == "2" || operador == "3" || operador == "+" || operador == "-") {
+                if (operador == "+" || operador == "-") {
+                    document.getElementById("one").innerHTML += `<td><input type="button" value="${operador}" onclick="ingresaroperacion(this.value)"></td>`
+                } else {
+                    document.getElementById("one").innerHTML += `<td><input type="button" value="${operador}" onclick="ingresarnumero(this.value)"></td>`
+                }
+            }
+            if (operador == "4" || operador == "5" || operador == "6" || operador == "*" || operador == "/") {
+                if (operador == "*" || operador == "/") {
+                    document.getElementById("two").innerHTML += `<td><input type="button" value="${operador}" onclick="ingresaroperacion(this.value)"></td>`
+                } else {
+                    document.getElementById("two").innerHTML += `<td><input type="button" value="${operador}" onclick="ingresarnumero(this.value)"></td>`
+                }
+            }
+            if (operador == "7" || operador == "8" || operador == "9" || operador == "^" || operador == "√") {
+                if (operador == "^") {
+                    document.getElementById("three").innerHTML += `<td><input type="button" value="${operador}" onclick="ingresaroperacion('**')"></td>`
+                } else if (operador == "√") {
+                    document.getElementById("three").innerHTML += `<td><input type="button" value="${operador}" onclick="raiz()"></td>`
+                } else {
+                    document.getElementById("three").innerHTML += `<td><input type="button" value="${operador}" onclick="ingresarnumero(this.value)"></td>`
+                }
+            }
+            if (operador == "0" || operador == "." || operador == "C" || operador == "=") {
+                if (operador == "C") {
+                    document.getElementById("four").innerHTML += `<td><input type="button" value="${operador}" onclick="limpiar()"></td>`
+                } else if (operador == "=") {
+                    document.getElementById("four").innerHTML += `<td colspan="2"><input type="button" value="       =      " onclick="resultado(this.value)">`
+                } else {
+                    document.getElementById("four").innerHTML += `<td><input type="button" value="${operador}" onclick="ingresarnumero(this.value)"></td>`
+                }
+            }
+        }
+    }
+
+    var numpantalla = "0";
+    var panconnumero = true
+    var usarpunto = false
+    var numespera = 0;
+    var operapendiente = "";
+    var soluciones = ""
+
+    function ingresarnumero(x) {
+        if (x !== ".") {
+            if (numpantalla == "0" || panconnumero == true) {
+                numpantalla = x;
+                document.getElementById("txtboxnros").value = x;
+            } else if (x != ".") {
+                numpantalla += x;
+                document.getElementById("txtboxnros").value += x;
+            }
+        }
+        if (x == "." && usarpunto == false && numpantalla == "0") {
+            numpantalla = x;
+            usarpunto = true;
+            document.getElementById("txtboxnros").value = "0.";
+
+        } else if (x == "." && usarpunto == false) {
+            numpantalla += x;
+            usarpunto = true;
+            document.getElementById("txtboxnros").value += x;
+
+        } else if (x == "." && usarpunto == true) { }
+
+        panconnumero = false
+    }
+    function ingresaroperacion(y) {
+        if (operapendiente == "") {
+            numespera = document.getElementById("txtboxnros").value;
+            ;
+            operapendiente = y;
+            panconnumero = true;
+            numpantalla = "";
+            usarpunto = false;
+            document.getElementById("txtboxnros").value += y;
+        }
+    }
+    function resultado() {
+        if (operapendiente != "") {
+            solucion = numespera + operapendiente + numpantalla;
+
+            if (operapendiente === '/' && numpantalla === '0') {
+                document.getElementById("txtboxnros").value = 'Error';
+            } else {
+                numpantalla = eval(solucion);
+                document.getElementById("txtboxnros").value = eval(solucion);
+            }
+
+            pantallaconnumero = true;
+            operapendiente = "";
+            usarpunto = false;
+        }
+    }
+
+    function raiz() {
+        if (operapendiente == "") {
+            document.getElementById("txtboxnros").value = Math.sqrt(numpantalla);
+            panconnumero = true;
+            numpantalla = "";
+            usarpunto = false;
+        }
+    }
+
+    function limpiar() {
+        numpantalla = "0";
+        panconnumero = true
+        usarpunto = false
+        numespera = 0;
+        operapendiente = "";
+        soluciones = ""
+        document.getElementById("txtboxnros").value = "0"
+    }
+
+</script>
+<style>
+    input[type="button"] {
+        background-color: white;
+        border: none;
+        color: black;
+        font-weight: bold;
+        padding: 7px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 4px;
+        cursor: pointer;
+    }
+
+    input[type="text"] {
+        color: black;
+        padding: 15px 32;
+        text-align: right;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+        width: 96.4%;
+        background-color: aquamarine;
+    }
+
+    body {
+        background-color: #D4D7DB;
+
+    }
+
+    #calculadora {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        height: 50vh;
+    }
+
+    table {
+        background-color: #585e64;
+        padding: 5px 5px;
+        top: 25%;
+    }
+
+    .regresar {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .boton {
+        background-color: white;
+        /* Green */
+        border: none;
+        color: black;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    .boton:hover {
+        background-color: red;
+        color: white;
+    }
+</style>
+
+</html>

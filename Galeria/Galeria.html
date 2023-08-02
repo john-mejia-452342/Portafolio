@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="imagendes" onclick="">
+            <img src="" alt="" id="imagendes">
+        </div>
+        <div class="galeria" id="galeria">
+
+        </div>
+        <div class="regresar">
+            <button onclick="window.location.href = '../index.html';" class="boton">Regresar</button>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        background-color: #D4D7DB;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+
+    .galeria {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        margin-left: 24%;
+        margin-bottom: 20px;
+        justify-content: space-between;
+    }
+
+    img {
+        height: 200px;
+        width: 200px;
+        border-radius: 5px;
+        margin: 5px;
+        box-shadow: 2px 2px 2xp grey;
+    }
+
+    #imagendes {
+        background-color: #D4D7DB;
+        height: 500px;
+        width: 500px;
+        margin-bottom: 20px;
+    }
+
+    .imagendes img {
+        height: 500px;
+        width: 500px;
+        box-shadow: 2px 2px 2px gray;
+    }
+
+    .regresar {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .boton {
+        background-color: white;
+        /* Green */
+        border: none;
+        color: black;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    .boton:hover {
+        background-color: red;
+        color: white;
+    }
+
+    @media only screen and (max-width: 1400px) {
+
+        #imagendes {
+            height: 400px;
+            width: 400px;
+        }
+
+        .imagendes img {
+            height: 400px;
+            width: 400px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .imagendes img {
+            height: 300px;
+            width: 300px;
+        }
+
+        #imagendes {
+            height: 300px;
+            width: 300px;
+        }
+    }
+
+    @media only screen and (max-width: 855px) {
+        .galeria {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    @media only screen and (max-width: 300px) {
+        .imagendes img {
+            height: 200px;
+            width: 200px;
+        }
+
+        #imagendes {
+            height: 200px;
+            width: 200px;
+        }
+    }
+</style>
+
+<script>
+
+    let imagendes = ""
+
+    const imagenes = [
+        { img: "img/1.jfif" },
+        { img: "img/2.jfif" },
+        { img: "img/3.jfif" },
+        { img: "img/4.jfif" },
+        { img: "img/5.jpg" },
+        { img: "img/6.jpg" },
+        { img: "img/7.jfif" },
+        { img: "img/8.jfif" },
+        { img: "img/9.jfif" },
+        { img: "img/10.jfif" },
+        { img: "img/11.jfif" },
+        { img: "img/12.jfif" },
+    ];
+
+    window.onload = function recorrer() {
+        let contenedor = document.getElementById("galeria");
+
+        for (let i = 0; i < imagenes.length; i++) {
+            let imagen = imagenes[i];
+            let imgElement = document.createElement("img");
+            imgElement.src = imagen.img;
+            imgElement.className = "imagen";
+            imgElement.onclick = cambiarImagen;
+            contenedor.appendChild(imgElement);
+        }
+
+        function cambiarImagen() {
+            let imagendes = document.getElementById("imagendes");
+            imagendes.src = this.src;
+        }
+    }
+
+
+
+</script>
+
+</html>
