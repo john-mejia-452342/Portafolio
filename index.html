@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <div class="container-all">
+
+
     <div class="encabezado">
         <h1>Trabajos HTML</h1>
         <h3>John Mejia</h3>
@@ -89,16 +92,28 @@
                 </a>
             </div>
         </div>
+        <div class="caja">
+            <div class="carrito-compra">
+                <a href="venta_motos/index.html">
+                    <img src="img/carrito.png" alt="">
+                    <p class="tetx">Veterinaria</p>
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="wrapper">
-        <ul style="padding-left: 0px;">
-            <li class="facebook"><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
-            <li class="twitter"><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
-            <li class="instagram"><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
-            <li class="google"><a href="#"><i class="fa fa-google fa-2x" aria-hidden="true"></i></a></li>
-            <li class="whatsapp"><a href="#"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a></li>
-        </ul>
+    <footer>
+        <div class="wrapper">
+            <ul style="padding-left: 0px;">
+                <li class="facebook"><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+                <li class="twitter"><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+                <li class="instagram"><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+                <li class="google"><a href="#"><i class="fa fa-google fa-2x" aria-hidden="true"></i></a></li>
+                <li class="whatsapp"><a href="#"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </footer>
     </div>
+
 
 </body>
 <style>
@@ -114,6 +129,11 @@
     body {
         margin: 0px;
         padding: 0px;
+    }
+    .container-all{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
 
     .encabezado {
@@ -196,12 +216,25 @@
         filter: none;
     }
 
+    footer {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+    }
+
     .wrapper {
         display: flex;
-        flex-basis: 20%;
+        text-align: center;
+        align-items: center;
         justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
         padding: 0px;
-        height: 20%;
+        height: 100%;
+        width: 100%;
         background-image: radial-gradient(circle at 20.66% 15.04%, #d3fff9 0,
                 #bffff6 10%, #a9fff4 20%, #8efff3 30%, #6dfcf2 40%, #3cf2f2 50%,
                 #00e8f3 60%, #00dff6 70%, #00d6f9 80%, #00cdfe 90%, #00c5ff 100%);
